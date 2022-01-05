@@ -6,7 +6,23 @@
             "email": "dev@dilikpulatov.com"
         }
     ],
+    "scripts": {
+        "test": "phpunit --testdox --no-interaction"
+    },
+    "autoload": {
+        "psr-4": {
+            "Appa\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
     "require": {
         "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }

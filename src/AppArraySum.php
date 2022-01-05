@@ -1,10 +1,10 @@
 <?php
+namespace App;
 
 class AppArraySum
 {
-
-    private array $l1 = [];
-    private array $l2 = [];
+    private array $l1;
+    private array $l2;
 
     public function __construct(array $l1, array $l2)
     {
@@ -38,8 +38,8 @@ class AppArraySum
         if ($this->validate()) {
             $l1 = implode($this->l1);
             $l2 = implode($this->l2);
-            $result = array_reverse(str_split((int)$l1 + (int)$l2));
-            return [$l1, $l2, $result];
+
+            return array_reverse(str_split((int)$l1 + (int)$l2));
         } else {
             return [0];
         }
