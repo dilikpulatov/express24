@@ -1,0 +1,12 @@
+{
+    "name": "dilik/express24",
+    "authors": [
+        {
+            "name": "dilikpulatov",
+            "email": "dev@dilikpulatov.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    }
+}
