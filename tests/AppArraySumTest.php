@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Tests;
@@ -6,7 +7,7 @@ namespace Tests;
 use PHPUnit\Framework\TestCase;
 use App\AppArraySum;
 
-class AppArraySumTest extends TestCase
+final class AppArraySumTest extends TestCase
 {
     /**
      * @dataProvider providerArraySum
@@ -27,21 +28,21 @@ class AppArraySumTest extends TestCase
     public function providerArraySum(): array
     {
         return [
-          [
-            [7,0,8],
-            [2,4,3],
-            [5,6,4]
-          ],
-          [
-            [0],
-            [0],
-            [0]
-          ],
-          [
-            [8,9,9,9,0,0,0,1],
-            [9,9,9,9,9,9,9],
-            [9,9,9,9]
-          ],
+            [
+                [7, 0, 8],
+                [2, 4, 3],
+                [5, 6, 4],
+            ],
+            [
+                [0],
+                [0],
+                [0],
+            ],
+            [
+                [8, 9, 9, 9, 0, 0, 0, 1],
+                [9, 9, 9, 9, 9, 9, 9],
+                [9, 9, 9, 9],
+            ],
         ];
     }
 }

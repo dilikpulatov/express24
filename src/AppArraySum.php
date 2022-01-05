@@ -1,7 +1,8 @@
 <?php
+
 namespace App;
 
-class AppArraySum
+final class AppArraySum
 {
     private array $l1;
     private array $l2;
@@ -14,14 +15,16 @@ class AppArraySum
 
     public function validate(): bool
     {
-        $count1 = count(array_filter($this->l1, fn($i) => is_int($i) && $i >= 0 && $i <= 9));
-        $count2 = count(array_filter($this->l2, fn($i) => is_int($i) && $i >= 0 && $i <= 9));
+        $count1 = count(array_filter($this->l1,
+            fn($i) => is_int($i) && $i >= 0 && $i <= 9));
+        $count2 = count(array_filter($this->l2,
+            fn($i) => is_int($i) && $i >= 0 && $i <= 9));
 
         if (
-          $count1 === 0 ||
-          $count2 === 0 ||
-          $count1 !== count($this->l1) ||
-          $count2 !== count($this->l2)
+            $count1 === 0
+            || $count2 === 0
+            || $count1 !== count($this->l1)
+            || $count2 !== count($this->l2)
         ) {
             return false;
         }
